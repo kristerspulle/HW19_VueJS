@@ -1,0 +1,184 @@
+{
+  "champions": [
+    {
+      "id": 1,
+      "name": "Aatrox",
+      "title": "the Darkin Blade",
+      "role": "Top",
+      "difficulty": "Hard",
+      "region": "Noxus",
+      "image": "aatrox.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Ahri",
+      "title": "the Nine-Tailed Fox",
+      "role": "Mid",
+      "difficulty": "Very Hard",
+      "region": "Ionia",
+      "image": "ahri.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Akali",
+      "title": "the Rogue Assassin",
+      "role": "Mid",
+      "difficulty": "Moderate",
+      "region": "Ionia",
+      "image": "akali.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Alistar",
+      "title": "the Minotaur",
+      "role": "Support",
+      "difficulty": "Easy",
+      "region": "Demacia",
+      "image": "alistar.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Amumu",
+      "title": "the Sad Mummy",
+      "role": "Jungle",
+      "difficulty": "Moderate",
+      "region": "Shurima",
+      "image": "amumu.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Anivia",
+      "title": "the Cryophoenix",
+      "role": "Mid",
+      "difficulty": "Moderate",
+      "region": "Freljord",
+      "image": "anivia.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Annie",
+      "title": "the Dark Child",
+      "role": "Mid",
+      "difficulty": "Easy",
+      "region": "Noxus",
+      "image": "annie.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Aphelios",
+      "title": "the Weapon of the Faithful",
+      "role": "ADC",
+      "difficulty": "Moderate",
+      "region": "Targon",
+      "image": "aphelios.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Ashe",
+      "title": "the Frost Archer",
+      "role": "ADC",
+      "difficulty": "Hard",
+      "region": "Freljord",
+      "image": "ashe.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Aurelion Sol",
+      "title": "The Star Forger",
+      "role": "Mid",
+      "difficulty": "Moderate",
+      "region": "Targon",
+      "image": "aurelion_sol.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Azir",
+      "title": "the Emperor of the Sands",
+      "role": "Mid",
+      "difficulty": "Moderate",
+      "region": "Shurima",
+      "image": "azir.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Bard",
+      "title": "the Wandering Caretaker",
+      "role": "Support",
+      "difficulty": "Moderate",
+      "region": "Mount Targon",
+      "image": "bard.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Blitzcrank",
+      "title": "the Great Steam Golem",
+      "role": "Support",
+      "difficulty": "Hard",
+      "region": "Piltover",
+      "image": "blitzcrank.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Brand",
+      "title": "the Burning Vengeance",
+      "role": "Mid",
+      "difficulty": "Easy",
+      "region": "Freljord",
+      "image": "brand.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Braum",
+      "title": "the Heart of the Freljord",
+      "role": "Support",
+      "difficulty": "Moderate",
+      "region": "Freljord",
+      "image": "braum.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Caitlyn",
+      "title": "the Sheriff of Piltover",
+      "role": "ADC",
+      "difficulty": "Very Hard",
+      "region": "Piltover",
+      "image": "caitlyn.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Camille",
+      "title": "the Steel Shadow",
+      "role": "Top",
+      "difficulty": "Hard",
+      "region": "Piltover",
+      "image": "camille.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Cassiopeia",
+      "title": "the Serpent's Embrace",
+      "role": "Mid",
+      "difficulty": "Very Hard",
+      "region": "Noxus",
+      "image": "cassiopeia.jpg"
+    },
+    {
+      "id": 19,
+      "name": "Cho'Gath",
+      "title": "the Terror of the Void",
+      "role": "Top",
+      "difficulty": "Very Hard",
+      "region": "Void",
+      "image": "chogath.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Corki",
+      "title": "the Daring Bombardier",
+      "role": "Mid",
+      "difficulty": "Very Hard",
+      "region": "Bandle City",
+      "image": "corki.jpg"
+    }
+  ]
+}

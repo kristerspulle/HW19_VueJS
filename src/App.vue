@@ -1,23 +1,33 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import ChampionCard from './components/ChampionCard-component.vue';
+import { onMounted, ref } from 'vue';
+
+type Champion = {
+  id: number,
+  name: string,
+  title: string,
+  role: string,
+  difficulty: string,
+  region: string,
+  image: string
+}
+
+const champions = ref<Champion[]>([]);
+
+onMounted(async () => {
+  const response = await fetch('http://localhost:3000/champions');
+  champions.value = await response.json();
+});
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <div v-for="champion in champions" v-bind:key="champion.id">
+    <ChampionCard :data="champion"/>
+  </div>
+   
+  <!-- <RouterView /> -->
 </template>
 
 <style scoped>
