@@ -1,7 +1,7 @@
 import homeView from '@/views/homeView.vue'
 import singleView from '@/views/cardDetails.vue'
 import { createRouter, createWebHistory } from 'vue-router'
-import formComponent from '@/components/form-component.vue'
+import newChampionView from '@/views/newChampionView.vue'
 
 
 const router = createRouter({
@@ -20,7 +20,7 @@ const router = createRouter({
     {
       path: '/newchampion',
       name: 'newChampion',
-      component: formComponent
+      component: newChampionView
     }
   ]
 })

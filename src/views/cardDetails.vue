@@ -14,12 +14,11 @@ const route = useRoute()
 let selectedChampion = ref<Champion | null>(null)
 
 
-onMounted(async () => {
+const singlechamp = async () => {
   const id = route.params.id
   const response = await fetch(`http://localhost:3000/champions/${id}`);
-  return selectedChampion.value = await response.json();
- 
-})
+  selectedChampion.value = await response.json();
+}
 
 
 watch(selectedChampion, (newChampion) => {

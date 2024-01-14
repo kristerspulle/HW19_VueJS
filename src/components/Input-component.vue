@@ -1,11 +1,12 @@
 <template>
   <label :for="name">{{ text }}</label>
-  <input class="input"
+  <input
+    class="input"
     :id="name"
     :type="type"
     :placeholder="placeholder"
-    :value="value"
-    @input="$emit('update:value', ($event.target as HTMLInputElement).value)"
+    :value="modelValue"
+    @input="$emit('update:modelValue', ($event.target as HTMLInputElement).value)"
   />
 </template>
 
@@ -14,7 +15,7 @@ defineProps({
   name: String,
   text: String,
   placeholder: String,
-  value: {
+  modelValue: {
     type: String,
     default: ''
   },
@@ -23,19 +24,19 @@ defineProps({
     default: 'text'
   }
 })
+defineEmits(['update:modelValue'])
 </script>
 
 <style scoped>
-  .input{
-    border-radius: 10px;
-    padding: 5px 15px;
-    border: 1px solid #005A82;
-    background-color: #005A82;
-    color: rgb(205, 250, 250);
-  }
+.input {
+  border-radius: 10px;
+  padding: 5px 15px;
+  border: 1px solid #005a82;
+  background-color: #005a82;
+  color: rgb(205, 250, 250);
+}
 
-  .input::placeholder{
-    color: rgb(205, 250, 250);
-  }
-
+.input::placeholder {
+  color: rgb(205, 250, 250);
+}
 </style>

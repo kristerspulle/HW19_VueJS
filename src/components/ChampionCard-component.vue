@@ -10,7 +10,7 @@
         <p>|</p>
         <p>{{ champions.region }}</p>
       </div>
-  </router-link>
+    </router-link>
 </template>
 
 <script setup lang="ts">
