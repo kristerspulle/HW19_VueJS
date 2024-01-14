@@ -1,5 +1,5 @@
 <template>
-  <button :type='type'>{{ text }}</button>
+  <button class="button" :type='type'>{{ text }}</button>
 </template>
 
 <script lang="ts" setup>
@@ -13,5 +13,13 @@
   })
 </script>
 
-<style>
+<style scoped>
+  .button{
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #CDFAFA;
+    border: 1px solid #CDFAFA;
+    cursor: pointer;
+  }
 </style>

@@ -11,7 +11,7 @@
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "db": "json-server --watch db.json --port 3000"
+    "db": "json-server db.json"
   },
   "dependencies": {
     "json-server": "^1.0.0-alpha.19",
