@@ -1,9 +1,13 @@
 <template>
-  <RouterView :champions="allChampions" @add-new-champion="addChampion" @delete-champion="deleteChampion" />
+  <RouterView
+    :allChampions="allChampions"
+    @add-new-champion="addChampion"
+    @delete-champion="deleteChampion"
+  />
 </template>
 
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+import { RouterView, useRoute } from 'vue-router'
 import { onMounted, ref } from 'vue'
 
 export type Champion = {
@@ -15,8 +19,10 @@ export type Champion = {
   region: string
   image: string
 }
-
+const route = useRoute()
+const { id } = route.params
 const allChampions = ref<Champion[]>([])
+
 
 onMounted(async () => {
   getChampions()
@@ -40,12 +46,22 @@ const addChampion = async (newChampion: Champion) => {
 
 const deleteChampion = async (id: number) => {
   await fetch(`http://localhost:3000/champions/${id}`, {
-    method: "DELETE",
+    method: 'DELETE',
     headers: {
       'Content-Type': 'application/json'
     }
   })
   getChampions()
+}
+
+const updateChampion = async (id: number, data: Champion) => {
+  await fetch(`http://localhost:3000/champions/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
 }
 </script>
 

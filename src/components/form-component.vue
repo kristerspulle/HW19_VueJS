@@ -8,7 +8,6 @@
       text="Enter Champion's name"
       v-model="newChampion.name"
     />
-    <p>{{ newChampion.name }}</p>
     <InputComponent
       name="title"
       type="text"
@@ -65,13 +64,13 @@ const newChampion = ref({
 const handleSubmit = () => {
   emit('addNewChampion', newChampion.value)
   newChampion.value = {
-  name: '',
-  title: '',
-  role: '',
-  difficulty: '',
-  region: '',
-  image: ''
-}
+    name: '',
+    title: '',
+    role: '',
+    difficulty: '',
+    region: '',
+    image: ''
+  }
 }
 
 const emit = defineEmits(['addNewChampion'])

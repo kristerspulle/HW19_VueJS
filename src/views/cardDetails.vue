@@ -1,28 +1,33 @@
 <template>
   <div>
-    <ChampionCard :champions="selectedChampion"/>
+    <ChampionCard
+      :id="singleChampion?.id"
+      :title="singleChampion?.title"
+      :name="singleChampion?.name"
+      :difficulty="singleChampion?.difficulty"
+      :role="singleChampion?.role"
+      :region="singleChampion?.region"
+      :image="singleChampion?.image"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
-import type { Champion } from '@/App.vue';
-import ChampionCard from '@/components/ChampionCard-component.vue';
-import { onMounted, ref, watch } from 'vue';
-import { useRoute } from 'vue-router';
+import type { Champion } from '@/App.vue'
+import ChampionCard from '@/components/ChampionCard-component.vue'
+import { onMounted, ref } from 'vue'
+import { useRoute } from 'vue-router'
+
 const route = useRoute()
+const { id } = route.params
+const singleChampion = ref<Champion | null>(null)
 
-let selectedChampion = ref<Champion | null>(null)
+onMounted(() => {
+  getChampion()
+})
 
-
-const singlechamp = async () => {
-  const id = route.params.id
-  const response = await fetch(`http://localhost:3000/champions/${id}`);
-  selectedChampion.value = await response.json();
+const getChampion = async () => {
+  const response = await fetch(`http://localhost:3000/champions/${id}`)
+  singleChampion.value = await response.json()
 }
-
-
-watch(selectedChampion, (newChampion) => {
-  console.log(selectedChampion.value);
-});
-
 </script>

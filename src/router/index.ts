@@ -2,6 +2,7 @@ import homeView from '@/views/homeView.vue'
 import singleView from '@/views/cardDetails.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import newChampionView from '@/views/newChampionView.vue'
+import editView from '@/views/editView.vue'
 
 
 const router = createRouter({
@@ -21,6 +22,11 @@ const router = createRouter({
       path: '/newchampion',
       name: 'newChampion',
       component: newChampionView
+    },
+    {
+      path: '/editchampion/:id',
+      name: 'editChampion',
+      component: editView
     }
   ]
 })
