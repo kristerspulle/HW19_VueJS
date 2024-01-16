@@ -60,7 +60,9 @@ const newChampion = ref({
   region: '',
   image: ''
 })
+import { useRouter } from 'vue-router';
 
+const route = useRouter()
 const handleSubmit = () => {
   emit('addNewChampion', newChampion.value)
   newChampion.value = {
@@ -71,6 +73,7 @@ const handleSubmit = () => {
     region: '',
     image: ''
   }
+  route.push('/')
 }
 
 const emit = defineEmits(['addNewChampion'])
