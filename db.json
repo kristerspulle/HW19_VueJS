@@ -71,14 +71,14 @@
       "id": 7
     },
     {
-      "id": 9,
       "name": "Ashe",
       "title": "the Frost Archer",
       "role": "ADC",
       "difficulty": "Hard",
       "region": "Freljord",
+      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt943aae038e2dee98/5db05fa8e9effa6ba5295f91/RiotX_ChampionList_ashe.jpg?quality=90&width=250",
       "detailImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ashe_0.jpg",
-      "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt943aae038e2dee98/5db05fa8e9effa6ba5295f91/RiotX_ChampionList_ashe.jpg?quality=90&width=250"
+      "id": 9
     },
     {
       "id": 10,
@@ -166,8 +166,8 @@
       "role": "Top",
       "difficulty": "Very Hard",
       "region": "Void",
-      "detailImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Chogath_0.jpg",
       "image": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt4dfb71de3ddc8166/5db05fb13a326d6df6c0e7ad/RiotX_ChampionList_chogath.jpg?quality=90&width=250",
+      "detailImage": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Chogath_0.jpg",
       "id": 19
     },
     {

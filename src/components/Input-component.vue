@@ -1,6 +1,7 @@
 <template>
   <label :for="name">{{ text }}</label>
   <input
+    required
     class="input"
     :id="name"
     :type="type"
@@ -35,7 +36,6 @@ defineEmits(['update:modelValue'])
   background-color: #005a82;
   color: rgb(205, 250, 250);
 }
-
 .input::placeholder {
   color: rgb(205, 250, 250);
 }

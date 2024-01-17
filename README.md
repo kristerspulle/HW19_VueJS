@@ -33,6 +33,12 @@ npm install
 npm run dev
 ```
 
+### Run JSON-Server
+
+```sh
+json-server --watch db.json
+```
+
 ### Type-Check, Compile and Minify for Production
 
 ```sh

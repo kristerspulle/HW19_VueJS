@@ -4,7 +4,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 import newChampionView from '@/views/newChampionView.vue'
 import editView from '@/views/editView.vue'
 
-
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [

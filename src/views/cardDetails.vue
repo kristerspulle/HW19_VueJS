@@ -25,11 +25,23 @@ import ChampionCard from '@/components/ChampionCard-component.vue'
 import { onMounted, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import ButtonComponent from '@/components/Button-component.vue'
+import { toast } from 'vue3-toastify'
+import 'vue3-toastify/dist/index.css'
 
 const route = useRoute()
 const router = useRouter()
 const { id } = route.params
 const singleChampion = ref<Champion | null>(null)
+
+const notification = (): void => {
+  toast('Champion deleted!', {
+    theme: 'dark',
+    type: 'default',
+    position: 'top-center',
+    transition: 'zoom',
+    dangerouslyHTMLString: true
+  })
+}
 
 onMounted((): void => {
   getChampion()
@@ -48,24 +60,28 @@ const deleteChampion = async (): Promise<void> => {
     }
   })
   router.push('/')
+  setTimeout(() => {
+    notification()
+  })
 }
 </script>
 
 <style scoped>
-.wrapper{
+.wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.singleCard{
+.singleCard {
   display: flex;
   flex-direction: column;
   border: 1px solid #1e282d;
   background-color: #1e282d;
   margin-top: 120px;
   border-radius: 10px;
+  margin-bottom: 30px;
 }
-.buttonWrapper{
+.buttonWrapper {
   display: flex;
   justify-content: center;
 }

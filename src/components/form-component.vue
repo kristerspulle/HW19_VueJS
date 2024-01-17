@@ -60,7 +60,7 @@ const newChampion = ref({
   region: '',
   image: ''
 })
-import { useRouter } from 'vue-router';
+import { useRouter } from 'vue-router'
 
 const route = useRouter()
 const handleSubmit = () => {

@@ -16,8 +16,8 @@
 
 <script setup lang="ts">
 import ChampionCard from '@/components/ChampionCard-component.vue'
-import type { Champion } from '@/App.vue';
-import { onMounted, ref} from 'vue'
+import type { Champion } from '@/App.vue'
+import { onMounted, ref } from 'vue'
 
 const allChampions = ref<Champion[]>([])
 
@@ -32,7 +32,6 @@ const getChampions = async (): Promise<void> => {
 </script>
 
 <style scoped>
-
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -40,6 +39,5 @@ const getChampions = async (): Promise<void> => {
   justify-content: center;
   margin: 0 100px;
   padding: 120px 0;
-  
 }
 </style>

@@ -45,8 +45,7 @@ const route = useRoute()
   width: 100%;
   max-width: 300px;
 }
-
-.wrapper{
+.wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
@@ -61,24 +60,20 @@ const route = useRoute()
   align-items: center;
   width: 100%;
 }
-
 .name {
   font-weight: bold;
   font-size: 20px;
 }
-
 .image {
   border-radius: 10px;
   width: 270px;
   height: 302px;
 }
-
-.detailImage{
+.detailImage {
   border-radius: 10px;
   aspect-ratio: 1.69;
   height: 600px;
 }
-
 .details {
   display: flex;
   gap: 20px;

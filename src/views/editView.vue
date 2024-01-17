@@ -1,5 +1,5 @@
 <template>
-   <form @submit.prevent="updateChampion" class="form">
+  <form @submit.prevent="updateChampion" class="editForm">
     <h3 class="title">Update Champion</h3>
     <InputComponent
       name="name"
@@ -41,11 +41,13 @@
 </template>
 
 <script lang="ts" setup>
-import type { Champion } from '@/App.vue';
-import InputComponent from '@/components/Input-component.vue';
-import ButtonComponent from '@/components/Button-component.vue';
-import { onMounted, ref } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
+import type { Champion } from '@/App.vue'
+import InputComponent from '@/components/Input-component.vue'
+import ButtonComponent from '@/components/Button-component.vue'
+import { onMounted, ref } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { toast } from 'vue3-toastify'
+import 'vue3-toastify/dist/index.css'
 
 const singleChampion = ref<Champion | null>(null)
 const route = useRoute()
@@ -81,6 +83,16 @@ const updateChampionValue = ref({
   detailImage: ''
 })
 
+const notification = (): void => {
+  toast('Champion updated!', {
+    theme: 'dark',
+    type: 'default',
+    position: 'top-center',
+    transition: 'zoom',
+    dangerouslyHTMLString: true
+  })
+}
+
 const updateChampion = async (): Promise<void> => {
   await fetch(`http://localhost:3000/champions/${id}`, {
     method: 'PUT',
@@ -90,11 +102,14 @@ const updateChampion = async (): Promise<void> => {
     body: JSON.stringify(updateChampionValue.value)
   })
   router.push(`/${id}`)
+  setTimeout(() => {
+    notification()
+  })
 }
 </script>
 
 <style scoped>
-.form {
+.editForm {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -106,6 +121,7 @@ const updateChampion = async (): Promise<void> => {
   border-radius: 10px;
   margin: 0 auto;
   margin-top: 120px;
+  margin-bottom: 152px;
 }
 .title {
   font-size: 30px;
